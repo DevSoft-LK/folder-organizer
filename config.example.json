@@ -1,0 +1,10 @@
+{
+  "targetDirectory": "C:\\Users\\YourUsername\\Downloads",
+  "dryRun": true,
+  "minAgeMinutes": 5,
+  "categories": {
+    "Images": [".jpg", ".png", ".gif"],
+    "Documents": [".pdf", ".docx", ".txt"],
+    "Archives": [".zip", ".rar"]
+  }
+}
