@@ -3,7 +3,15 @@
 A custom command-line utility built with Node.js that automatically organizes a messy directory (like a Downloads folder) by moving files into categorized subfolders (e.g., Documents, Images, Code).
 
 ## 📸 Demo
-![Folder Organizer Demo](images/demo.png)
+
+### 1. Preview the Changes (Dry Run)
+![Dry Run Demo](images/demo-dry-run.png)
+
+### 2. Organize the Files
+![Move Files Demo](images/demo-move.png)
+
+### 3. Undo the Changes
+![Undo Demo](images/demo-undo.png)
 
 ## 🚀 The Problem It Solves
 Download folders quickly become chaotic. This script automates the cleanup process, saving time and keeping the workspace organized.
