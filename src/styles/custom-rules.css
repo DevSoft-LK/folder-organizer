@@ -1,0 +1,34 @@
+/* Editable category rules */
+.editable-pill { color: #238566 !important; background: #eaf8f1 !important; }
+.custom-rules-card { margin-bottom: 18px; }
+.custom-category-list { padding: 0 20px; }
+.custom-category-row { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; align-items: start; gap: 13px; padding: 17px 0; border-top: 1px solid #f0eef5; }
+.custom-category-number { display: grid; place-items: center; width: 31px; height: 31px; border-radius: 9px; color: #7750c6; background: #f1ebff; font-size: 10px; font-weight: 800; }
+.custom-category-fields { display: grid; grid-template-columns: minmax(150px, .75fr) minmax(220px, 1.25fr); gap: 13px; min-width: 0; }
+.custom-field { display: flex; flex-direction: column; gap: 6px; min-width: 0; color: #5e5870; font-size: 10px; font-weight: 750; }
+.custom-field .form-control { min-height: 38px; border-color: #e8e4f0; border-radius: 8px; color: #39334d; font-size: 11px; box-shadow: none; }
+.custom-field .form-control:focus { border-color: #b9a4e5; box-shadow: 0 0 0 3px rgb(112 71 200 / 9%); }
+.custom-field small { color: #a09bac; font-size: 9px; font-weight: 500; }
+.remove-category-btn { align-self: center; margin-top: 16px; padding: 7px 10px; font-size: 10px; }
+.add-category-panel { padding: 18px 20px; margin: 12px 20px 18px; border: 1px dashed #dcd2f0; border-radius: 12px; background: #fcfaff; }
+.add-category-panel h3 { margin: 5px 0 4px; color: #3a334d; font-size: 13px; font-weight: 760; }
+.add-category-panel p { margin: 0 0 13px; color: #938ca3; font-size: 10px; }
+.add-category-fields { display: grid; grid-template-columns: minmax(130px, .7fr) minmax(180px, 1fr) auto; align-items: end; gap: 12px; }
+.add-category-btn { min-height: 38px; white-space: nowrap; }
+.custom-rules-footer { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 14px 20px; border-top: 1px solid #f0eef5; background: #fdfcff; }
+.custom-rules-note { display: flex; align-items: flex-start; gap: 8px; max-width: 530px; color: #928ba2; font-size: 9px; line-height: 1.6; }
+.custom-rules-note svg { flex: 0 0 auto; color: #8565c2; }
+.custom-rules-message { padding: 20px; color: #8e879f; font-size: 11px; }
+.custom-rules-error { padding: 10px 12px; margin: 10px 20px; border: 1px solid #f2d3d3; border-radius: 8px; color: #a83232; background: #fff7f7; font-size: 10px; }
+@media (max-width: 1050px) {
+  .custom-category-fields { grid-template-columns: 1fr; }
+  .add-category-fields { grid-template-columns: 1fr 1fr; }
+  .add-category-btn { grid-column: 1 / -1; justify-self: start; }
+}
+@media (max-width: 760px) {
+  .custom-category-row { grid-template-columns: 30px minmax(0, 1fr); }
+  .remove-category-btn { grid-column: 2; justify-self: start; margin-top: 0; }
+  .custom-rules-footer { align-items: stretch; flex-direction: column; }
+  .add-category-fields { grid-template-columns: 1fr; }
+  .add-category-btn { grid-column: auto; }
+}

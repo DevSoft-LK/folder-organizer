@@ -1,64 +1,50 @@
-# 📂 Node.js File Organizer
+# DevSoft Folder Organizer — desktop starter
 
-A custom command-line utility built with Node.js that automatically organizes a messy directory (like a Downloads folder) by moving files into categorized subfolders (e.g., Documents, Images, Code).
+A Windows-first file organizer starter built with React, TypeScript, Bootstrap 5, Electron, Vite, and electron-builder.
 
-## 📸 Demo
+## Requirements
 
-### 1. Preview the Changes (Dry Run)
-![Dry Run Demo](images/demo-dry-run.png)
+- Node.js 22.12+ (Node 24 is suitable)
+- npm
+- Windows for generating the Windows installer
 
-### 2. Organize the Files
-![Move Files Demo](images/demo-move.png)
+## Run in development
 
-### 3. Undo the Changes
-![Undo Demo](images/demo-undo.png)
+Open PowerShell in this folder and run:
 
-## 🚀 The Problem It Solves
-Download folders quickly become chaotic. This script automates the cleanup process, saving time and keeping the workspace organized.
+```powershell
+npm install
+npm run dev
+```
 
-## ✨ Features
-- **Custom Configuration:** Easily add your own categories and map specific file extensions without touching the code.
-- **Dry-Run Safety:** Includes a `dryRun` toggle to preview file moves before executing them.
-- **Undo Feature:** Made a mistake? Run the undo command to instantly move all files back to where they were.
-- **Safety Checks:** 
-  - Skips files modified in the last 5 minutes (prevents moving active downloads).
-  - Ignores hidden system files.
-  - Handles duplicate filenames automatically (e.g., `file (1).pdf`).
+## Build and package for Windows
 
-## 🛠️ Tech Stack
-- **JavaScript (Node.js)**
-- Built-in `fs` (File System) and `path` modules.
+```powershell
+npm run build
+npm run dist:win
+```
 
----
+The installer is written to `release/`.
 
-## 💻 How to Run Locally
+## Current MVP
 
-### 1. Prerequisites
-Ensure you have [Node.js](https://nodejs.org) installed on your computer. You can verify this by running `node -v` in your terminal.
+- Choose a folder using the native Windows folder picker.
+- Preview files and target category folders before moving anything.
+- Categorize common image, video, audio, document, archive, installer, and code files.
+- Leave existing subfolders untouched; do not recursively scan.
+- Skip hidden/system files, partial downloads, and files modified in the last five minutes.
+- Confirm moves in a native dialog and add numbered names rather than overwrite duplicates.
+- Undo the most recent run; a file at its original path is never overwritten during undo.
 
-### 2. Setup Configuration
-Because this script is highly customizable, you need to set up your preferences before running it.
+## Safety architecture
 
-1. In the project folder, locate the file named **`config.example.json`**.
-2. Make a copy of it and rename the copy to **`config.json`**. *(Note: The script will not work without this step).*
-3. Open `config.json` in any text editor (like Notepad or VS Code) and edit the following:
-   - **`targetDirectory`**: Change this to the exact path of the folder you want to organize (remember to use double backslashes `\\` for Windows paths, e.g., `"C:\\Users\\YourName\\Downloads"`).
-   - **`dryRun`**: Keep this as `true` initially to preview what the script will do. Change it to `false` when you are ready to actually move files.
-   - **`categories`**: Add your own custom folders and map the file extensions (e.g., `".pdf", ".mp3"`) you want inside them.
+The React renderer cannot access Node.js file-system APIs directly. It calls a small allow-listed API exposed by `electron/preload.ts`; `electron/main.ts` handles folder picking and file operations. Context isolation, disabled Node integration, renderer sandboxing, and IPC sender checks are enabled.
 
-### 3. Execute the Script
+The undo log is saved in Electron's user-data directory, not in the project folder. This is a starter MVP; test with a temporary folder containing copies before using it on important files.
 
-#### Windows Users (The Easy Way)
-You don't even need to open a terminal! Just double-click the batch files:
-*   **`run.bat`** — Runs the organizer. It will preview or move files based on your `config.json`.
-*   **`undo.bat`** — Instantly moves the files from your last run back to their original locations.
 
-#### Mac / Linux Users (or terminal lovers)
-Open your terminal in the project directory and run:
+## Editable category rules
 
-```bash
-# To organize files:
-node organizer.js
+Open **Preferences → Custom folders and file types** to rename destination folders, change their file extensions, add rules such as `Design` for `.psd, .ai, .fig`, or remove rules. Save changes before refreshing the preview. Extensions that do not match a rule are placed in `Other`.
 
-# To undo the last run:
-node organizer.js --undo
+Settings are stored locally in Electron's `userData/organizer-settings.json`, not in the project source tree. Folder names and extension assignments are validated in Electron before they are saved. Do not edit files in your Downloads folder during initial testing; use a temporary folder with copies.

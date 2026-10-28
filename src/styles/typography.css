@@ -1,0 +1,527 @@
+/* ========================================
+   Typography readability improvements
+   DevSoft Folder Organizer
+   ======================================== */
+
+body {
+  font-size: 15px;
+}
+
+/* Sidebar and navigation */
+.sidebar-link {
+  font-size: 14px;
+}
+
+.brand-product,
+.sidebar-section-label,
+.sidebar-count,
+.sidebar-security-card p,
+.security-status,
+.sidebar-footer-mark,
+.sidebar-footer-copy strong,
+.sidebar-footer-copy span,
+.version-label {
+  font-size: 12px;
+}
+
+/* Top navigation */
+.breadcrumbs {
+  font-size: 13px;
+}
+
+.desktop-status {
+  font-size: 12px;
+}
+
+/* Page headings and descriptions */
+.eyebrow,
+.section-eyebrow,
+.field-label,
+.content-card-header .section-eyebrow {
+  font-size: 11px;
+}
+
+.page-heading p,
+.folder-select-copy p,
+.content-card-header p,
+.organizer-table-heading p,
+.settings-intro p,
+.settings-row-copy p {
+  font-size: 13px;
+}
+
+/* Buttons and search controls */
+.app-primary-btn,
+.app-outline-btn {
+  font-size: 13px;
+}
+
+.text-action,
+.search-box input,
+.filter-tab {
+  font-size: 12px;
+}
+
+/* Dashboard statistics and cards */
+.stat-label,
+.stat-hint,
+.category-title-row,
+.category-title-row strong,
+.tip-foot,
+.notice-copy > strong,
+.notice-details,
+.working-indicator,
+.page-footer {
+  font-size: 12px;
+}
+
+.content-card-header h2,
+.organizer-table-heading h2 {
+  font-size: 16px;
+}
+
+.content-card-header p,
+.organizer-table-heading p,
+.tip-card p {
+  font-size: 13px;
+}
+
+/* File preview tables */
+.files-table thead th {
+  font-size: 11px;
+}
+
+.files-table tbody td {
+  font-size: 13px;
+}
+
+.file-name-copy strong {
+  font-size: 13px;
+}
+
+.file-name-copy > span,
+.category-chip,
+.file-status,
+.status-reason,
+.destination-text {
+  font-size: 12px;
+}
+
+.table-empty strong,
+.category-empty strong {
+  font-size: 13px;
+}
+
+.table-empty span,
+.category-empty p {
+  font-size: 12px;
+}
+
+/* File organizer page */
+.folder-bar-text strong {
+  font-size: 13px;
+}
+
+.organizer-summary > div > div span {
+  font-size: 12px;
+}
+
+.organize-callout,
+.table-footer-note,
+.activity-count {
+  font-size: 12px;
+}
+
+/* Activity page */
+.activity-entry-main strong {
+  font-size: 13px;
+}
+
+.activity-entry-main p {
+  font-size: 13px;
+}
+
+.activity-entry-main > span {
+  font-size: 12px;
+}
+
+.page-empty-state h3 {
+  font-size: 16px;
+}
+
+.page-empty-state p {
+  font-size: 13px;
+}
+
+/* Preferences page */
+.settings-intro strong,
+.settings-row-copy strong,
+.settings-category-item strong {
+  font-size: 13px;
+}
+
+.read-only-pill,
+.enabled-tag,
+.settings-category-item span,
+.other-category-note {
+  font-size: 12px;
+}
+
+/* File and folder information */
+.folder-path-text {
+  font-size: 14px;
+}
+
+
+/* ==========================================
+   ACCESSIBILITY: READABLE DESKTOP TYPOGRAPHY
+   DevSoft Folder Organizer
+   ========================================== */
+
+/* Base font and rendering */
+:root {
+  font-size: 16px;
+  --app-muted: #625d70;
+}
+
+body {
+  font-size: 15px !important;
+  line-height: 1.55;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+  text-rendering: auto;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+/* Sidebar and navigation */
+.brand-name {
+  font-size: 20px !important;
+}
+
+.brand-product,
+.sidebar-section-label,
+.sidebar-count,
+.sidebar-security-card p,
+.security-status,
+.sidebar-footer-mark,
+.sidebar-footer-copy strong,
+.sidebar-footer-copy span,
+.version-label {
+  font-size: 12px !important;
+}
+
+.sidebar-link {
+  font-size: 15px !important;
+  min-height: 48px;
+}
+
+/* Top bar and page headings */
+.breadcrumbs {
+  font-size: 14px !important;
+}
+
+.desktop-status {
+  font-size: 13px !important;
+}
+
+.eyebrow,
+.section-eyebrow,
+.field-label,
+.content-card-header .section-eyebrow {
+  font-size: 12px !important;
+  letter-spacing: 0.06em;
+}
+
+.page-heading h1 {
+  font-size: clamp(27px, 2.2vw, 34px);
+}
+
+.page-heading p,
+.folder-select-copy p,
+.content-card-header p,
+.organizer-table-heading p,
+.settings-intro p,
+.settings-row-copy p {
+  font-size: 14px !important;
+  line-height: 1.6;
+}
+
+/* Buttons and inputs */
+.app-primary-btn,
+.app-outline-btn {
+  font-size: 14px !important;
+  min-height: 40px;
+}
+
+.text-action,
+.search-box input,
+.filter-tab {
+  font-size: 13px !important;
+}
+
+.search-box input {
+  min-height: 24px;
+}
+
+.form-control,
+.form-select,
+.form-check-label {
+  font-size: 14px !important;
+}
+
+/* Dashboard statistics */
+.stat-label {
+  font-size: 13px !important;
+}
+
+.stat-value {
+  font-size: 29px;
+}
+
+.stat-hint {
+  font-size: 12px !important;
+  line-height: 1.5;
+}
+
+/* Cards */
+.content-card-header h2,
+.organizer-table-heading h2 {
+  font-size: 17px !important;
+}
+
+.tip-title {
+  font-size: 14px !important;
+}
+
+.tip-card p,
+.tip-foot,
+.notice-copy > strong,
+.notice-details,
+.working-indicator,
+.page-footer {
+  font-size: 13px !important;
+  line-height: 1.6;
+}
+
+.notice-details {
+  overflow-wrap: anywhere;
+}
+
+/* File preview table */
+.files-table {
+  --bs-table-color: #393448;
+}
+
+.files-table thead th {
+  font-size: 12px !important;
+  color: #514b61 !important;
+  letter-spacing: 0.04em;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.files-table tbody td {
+  font-size: 14px !important;
+  color: #393448 !important;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  line-height: 1.5;
+}
+
+.file-name-copy strong {
+  font-size: 14px !important;
+  color: #302b40 !important;
+}
+
+.file-name-copy > span {
+  font-size: 12px !important;
+  color: #625d70 !important;
+}
+
+.category-chip,
+.file-status {
+  font-size: 12px !important;
+}
+
+.destination-text {
+  font-size: 12px !important;
+  color: #514b61 !important;
+}
+
+.status-reason {
+  max-width: 180px;
+  font-size: 12px !important;
+  color: #625d70 !important;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.table-empty strong,
+.category-empty strong {
+  font-size: 14px !important;
+}
+
+.table-empty span,
+.category-empty p {
+  font-size: 13px !important;
+  color: #625d70 !important;
+  line-height: 1.6;
+}
+
+/* Category breakdown */
+.category-title-row,
+.category-title-row strong {
+  font-size: 14px !important;
+}
+
+.category-list {
+  gap: 19px;
+}
+
+.category-title-row {
+  line-height: 1.5;
+}
+
+/* Organizer page */
+.folder-path-text,
+.folder-bar-text strong {
+  font-size: 14px !important;
+}
+
+.organizer-summary > div > div span {
+  font-size: 13px !important;
+  color: #625d70 !important;
+}
+
+.organizer-summary > div > div strong {
+  font-size: 22px;
+}
+
+.organize-callout,
+.table-footer-note,
+.activity-count {
+  font-size: 13px !important;
+}
+
+.search-box {
+  min-height: 42px;
+}
+
+.filter-tab {
+  padding: 9px 12px;
+}
+
+/* Activity page */
+.activity-entry-main strong {
+  font-size: 14px !important;
+}
+
+.activity-entry-main p {
+  font-size: 14px !important;
+  color: #625d70 !important;
+  line-height: 1.65;
+}
+
+.activity-entry-main > span {
+  font-size: 12px !important;
+  color: #625d70 !important;
+}
+
+.page-empty-state h3 {
+  font-size: 17px !important;
+}
+
+.page-empty-state p {
+  font-size: 14px !important;
+  color: #625d70 !important;
+  line-height: 1.65;
+}
+
+/* Preferences and custom categories */
+.settings-intro strong,
+.settings-row-copy strong,
+.settings-category-item strong,
+.add-category-panel h3 {
+  font-size: 14px !important;
+}
+
+.read-only-pill,
+.enabled-tag,
+.settings-category-item span,
+.other-category-note,
+.custom-rules-note {
+  font-size: 12px !important;
+}
+
+.settings-row-copy p,
+.settings-intro p {
+  color: #625d70 !important;
+}
+
+.custom-field {
+  font-size: 13px !important;
+}
+
+.custom-field .form-control {
+  min-height: 42px;
+  font-size: 14px !important;
+}
+
+.custom-field small,
+.add-category-panel p {
+  font-size: 12px !important;
+  color: #625d70 !important;
+}
+
+.remove-category-btn {
+  font-size: 13px !important;
+}
+
+.custom-rules-message,
+.custom-rules-error {
+  font-size: 13px !important;
+  line-height: 1.6;
+}
+
+/* Improve contrast for muted text on light backgrounds */
+.page-heading p,
+.folder-select-copy p,
+.content-card-header p,
+.organizer-table-heading p,
+.stat-label,
+.stat-hint,
+.category-title-row,
+.tip-card p,
+.notice-copy > strong,
+.table-footer-note,
+.settings-row-copy p,
+.settings-intro p,
+.custom-rules-note {
+  color: #625d70 !important;
+}
+
+/* Make keyboard focus easier to see */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #7047c8 !important;
+  outline-offset: 3px;
+}
+
+/* Give text more room on narrower windows */
+@media (max-width: 1000px) {
+  .files-table {
+    min-width: 820px;
+  }
+
+  .files-table-wrap {
+    overflow-x: auto;
+  }
+}

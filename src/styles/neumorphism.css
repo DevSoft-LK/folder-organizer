@@ -1,0 +1,428 @@
+/* ==========================================
+   DEVSOFT FOLDER ORGANIZER
+   Light Neumorphism Theme
+   ========================================== */
+
+:root {
+  --neo-bg: #e9e7f0;
+  --neo-surface: #e9e7f0;
+  --neo-light: #ffffff;
+  --neo-shadow-dark: #cbc9d5;
+  --neo-shadow-light: #ffffff;
+  --neo-text: #302b42;
+  --neo-muted: #625d70;
+  --neo-purple: #7047c8;
+}
+
+/* Main background */
+html,
+body,
+#root,
+.app-layout,
+.main-column,
+.page-content {
+  background: var(--neo-bg) !important;
+  color: var(--neo-text);
+}
+
+body {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+/* Sidebar: light raised surface */
+.sidebar {
+  background: var(--neo-bg) !important;
+  color: var(--neo-text);
+  border-right: 1px solid #d8d5e1;
+  box-shadow: 5px 0 12px rgb(120 112 145 / 5%);
+}
+
+.brand-name {
+  color: var(--neo-text);
+}
+
+.brand-name span {
+  color: var(--neo-purple);
+}
+
+.brand-product,
+.sidebar-section-label,
+.sidebar-footer-copy span,
+.version-label {
+  color: #716b82 !important;
+}
+
+.sidebar-link {
+  color: #5d576d;
+  border: 0;
+  transition: box-shadow 160ms ease, color 160ms ease;
+}
+
+.sidebar-link:hover {
+  color: var(--neo-purple);
+  background: var(--neo-bg);
+  box-shadow:
+    3px 3px 7px var(--neo-shadow-dark),
+    -3px -3px 7px var(--neo-shadow-light);
+}
+
+.sidebar-link.active {
+  color: var(--neo-purple);
+  background: var(--neo-bg);
+  box-shadow:
+    inset 3px 3px 6px var(--neo-shadow-dark),
+    inset -3px -3px 6px var(--neo-shadow-light);
+}
+
+.sidebar-link.active > svg {
+  color: var(--neo-purple);
+}
+
+.sidebar-count {
+  color: #5c3ba4;
+  background: #ddd5f0;
+}
+
+.sidebar-security-card {
+  border: 0;
+  background: var(--neo-bg);
+  box-shadow:
+    5px 5px 10px var(--neo-shadow-dark),
+    -5px -5px 10px var(--neo-shadow-light);
+}
+
+.security-title {
+  color: var(--neo-text);
+}
+
+.sidebar-security-card p,
+.security-status {
+  color: var(--neo-muted);
+}
+
+.sidebar-footer {
+  border-color: #d4d1dd;
+}
+
+.sidebar-footer-mark {
+  color: var(--neo-purple);
+  background: var(--neo-bg);
+  border: 0;
+  box-shadow:
+    3px 3px 6px var(--neo-shadow-dark),
+    -3px -3px 6px var(--neo-shadow-light);
+}
+
+.sidebar-footer-copy strong {
+  color: var(--neo-text);
+}
+
+/* Top navigation */
+.topbar {
+  background: var(--neo-bg) !important;
+  border-bottom: 0;
+  box-shadow: 0 4px 9px rgb(120 112 145 / 7%);
+}
+
+.topbar-divider {
+  background: #d2cfdb;
+}
+
+/* Raised cards */
+.content-card,
+.stat-card,
+.folder-select-card,
+.organizer-folder-bar,
+.organizer-summary > div,
+.settings-intro {
+  border: 0 !important;
+  border-radius: 16px;
+  background: var(--neo-surface) !important;
+  box-shadow:
+    7px 7px 14px var(--neo-shadow-dark),
+    -7px -7px 14px var(--neo-shadow-light);
+}
+
+/* Give cards consistent spacing */
+.content-card-header,
+.organizer-table-heading {
+  border-bottom: 1px solid #dcd9e5;
+}
+
+.content-card-header p,
+.organizer-table-heading p,
+.page-heading p {
+  color: var(--neo-muted) !important;
+}
+
+/* Soft purple information panel */
+.tip-card {
+  border: 0;
+  border-radius: 16px;
+  background: #e9e3f6;
+  box-shadow:
+    6px 6px 12px #cbc4d9,
+    -6px -6px 12px #fff;
+}
+
+.tip-title {
+  color: #44345f;
+}
+
+.tip-card p {
+  color: #5e536f;
+}
+
+/* Folder selection icon and statistic icons */
+.folder-select-icon,
+.stat-icon,
+.category-icon,
+.summary-icon,
+.settings-row-icon,
+.activity-entry-icon {
+  border: 0;
+  box-shadow:
+    3px 3px 6px var(--neo-shadow-dark),
+    -3px -3px 6px var(--neo-shadow-light);
+}
+
+/* Primary button: elevated purple */
+.app-primary-btn {
+  border: 0 !important;
+  border-radius: 10px;
+  color: #ffffff !important;
+  background: var(--neo-purple) !important;
+  box-shadow:
+    4px 4px 8px #c5bed4,
+    -3px -3px 8px #ffffff;
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+
+.app-primary-btn:hover:not(:disabled) {
+  background: #603cb2 !important;
+  box-shadow:
+    2px 2px 5px #c5bed4,
+    -2px -2px 5px #ffffff;
+  transform: translateY(-1px);
+}
+
+.app-primary-btn:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: inset 3px 3px 6px #513095;
+}
+
+.app-primary-btn:disabled {
+  opacity: 0.55;
+}
+
+/* Secondary buttons */
+.app-outline-btn {
+  color: #51476a !important;
+  border: 0 !important;
+  border-radius: 10px;
+  background: var(--neo-bg) !important;
+  box-shadow:
+    4px 4px 8px var(--neo-shadow-dark),
+    -4px -4px 8px var(--neo-shadow-light);
+}
+
+.app-outline-btn:hover:not(:disabled) {
+  color: var(--neo-purple) !important;
+  box-shadow:
+    inset 3px 3px 6px var(--neo-shadow-dark),
+    inset -3px -3px 6px var(--neo-shadow-light);
+}
+
+/* Inset search box */
+.search-box {
+  border: 0;
+  border-radius: 10px;
+  background: var(--neo-bg);
+  box-shadow:
+    inset 4px 4px 7px var(--neo-shadow-dark),
+    inset -4px -4px 7px var(--neo-shadow-light);
+}
+
+.search-box input {
+  color: var(--neo-text);
+}
+
+.search-box input::placeholder {
+  color: #716b82;
+}
+
+.search-box:focus-within {
+  border: 0;
+  box-shadow:
+    inset 3px 3px 6px var(--neo-shadow-dark),
+    inset -3px -3px 6px var(--neo-shadow-light),
+    0 0 0 2px #b5a0e6;
+}
+
+/* Filter controls */
+.filter-tabs {
+  border: 0;
+  border-radius: 10px;
+  background: var(--neo-bg);
+  box-shadow:
+    inset 3px 3px 6px var(--neo-shadow-dark),
+    inset -3px -3px 6px var(--neo-shadow-light);
+}
+
+.filter-tab {
+  color: #514b61;
+}
+
+.filter-tab.active {
+  color: var(--neo-purple);
+  background: var(--neo-bg);
+  box-shadow:
+    3px 3px 6px var(--neo-shadow-dark),
+    -3px -3px 6px var(--neo-shadow-light);
+}
+
+/* File table */
+.files-table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--neo-text);
+  --bs-table-border-color: #dcd9e5;
+}
+
+.files-table thead th {
+  color: #514b61 !important;
+  background: transparent;
+}
+
+.files-table tbody td {
+  color: #403a50 !important;
+}
+
+.files-table tbody tr:hover > * {
+  background: rgb(255 255 255 / 25%);
+}
+
+.organizer-table-footer,
+.table-tools,
+.other-category-note,
+.table-bottom-link {
+  background: transparent;
+  border-color: #d8d5e1;
+}
+
+/* Inset form fields */
+.form-control,
+.form-select,
+.custom-field .form-control {
+  color: var(--neo-text);
+  border: 0 !important;
+  border-radius: 10px;
+  background: var(--neo-bg) !important;
+  box-shadow:
+    inset 4px 4px 7px var(--neo-shadow-dark),
+    inset -4px -4px 7px var(--neo-shadow-light) !important;
+}
+
+.form-control:focus,
+.form-select:focus,
+.custom-field .form-control:focus {
+  border: 0 !important;
+  box-shadow:
+    inset 3px 3px 6px var(--neo-shadow-dark),
+    inset -3px -3px 6px var(--neo-shadow-light),
+    0 0 0 2px #b5a0e6 !important;
+}
+
+.form-control::placeholder {
+  color: #716b82;
+}
+
+/* Settings sections */
+.settings-card,
+.categories-settings-card {
+  border: 0;
+  border-radius: 16px;
+  background: var(--neo-bg);
+  box-shadow:
+    7px 7px 14px var(--neo-shadow-dark),
+    -7px -7px 14px var(--neo-shadow-light);
+}
+
+.settings-row,
+.settings-category-item,
+.custom-category-row {
+  border-color: #d9d6e2;
+}
+
+.add-category-panel {
+  border: 1px dashed #b9add1;
+  border-radius: 12px;
+  background: #e5e1ed;
+}
+
+.custom-rules-footer {
+  border-color: #d8d5e1;
+  background: transparent;
+}
+
+/* Status and notification area */
+.notice-panel {
+  border: 0;
+  border-radius: 12px;
+  background: var(--neo-bg);
+  box-shadow:
+    inset 4px 4px 8px var(--neo-shadow-dark),
+    inset -4px -4px 8px var(--neo-shadow-light);
+}
+
+.notice-panel-warning {
+  background: #f2e8d9;
+  box-shadow:
+    inset 4px 4px 8px #d8c7b3,
+    inset -4px -4px 8px #fff9f0;
+}
+
+/* Keep status labels readable */
+.file-status-ready {
+  color: #176b4e;
+  background: #d5eddf;
+}
+
+.file-status-skipped {
+  color: #514b61;
+  background: #dfdce7;
+}
+
+.category-chip {
+  color: #4f3b79;
+  background: #e1d9f2;
+  border-color: transparent;
+}
+
+/* Keyboard focus */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #7047c8 !important;
+  outline-offset: 3px;
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.sidebar-footer-logo {
+  display: block;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  object-fit: contain;
+  border-radius: 8px;
+}

@@ -1,3 +1,31 @@
+# Dependencies
 node_modules/
-config.json
-undo-history.json
+
+# Build outputs
+dist/
+dist-electron/
+release/
+coverage/
+out/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# Temporary build diagnostics
+build-errors.txt
+frontend-errors.txt
+electron-errors.txt
+
+# Temporary backups
+*.bak
+*.imports-only-backup
+styles-legacy-backup/
+
+# Operating system files
+.DS_Store
+Thumbs.db

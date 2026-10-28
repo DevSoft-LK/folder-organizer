@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./splash.css" />
+  <title>DevSoft Folder Organizer</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .app-icon {
+      display: block;
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    #error {
+      display: none;
+      color: #b42318;
+      font: 12px Arial, sans-serif;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <img
+    class="app-icon"
+    src="./icons/organizer.jpg"
+    alt="DevSoft Folder Organizer"
+    draggable="false"
+    onerror="this.style.display='none'; document.getElementById('error').style.display='block';"
+  />
+
+  <div id="error">Icon failed to load</div>
+</body>
+</html>
