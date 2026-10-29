@@ -1,0 +1,17 @@
+{
+  "name": "folder-organizer-cli",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A configurable Downloads folder organizer CLI",
+  "main": "dist/organizer.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "npm run build && node dist/organizer.js",
+    "organize": "npm run build && node dist/organizer.js",
+    "undo": "npm run build && node dist/organizer.js --undo"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2"
+  }
+}

@@ -1,3 +1,4 @@
 node_modules/
+dist/
+undo-history.json/
 config.json
-undo-history.json
